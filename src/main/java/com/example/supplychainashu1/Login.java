@@ -45,8 +45,8 @@ public class Login {
 //        Login login = new Login();
 //        System.out.println(login.customerLogin("malav@gmail.com","malav123"));
 //    }
-    public static void main(String[] args) {
-    Login login = new Login();
-        System.out.println(login.getEncryptedPassword("ashu1234"));
-    }
+//    public static void main(String[] args) {
+//    Login login = new Login();
+//        System.out.println(login.getEncryptedPassword("ashu1234"));
+//    }
 }
