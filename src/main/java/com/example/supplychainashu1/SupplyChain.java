@@ -3,7 +3,6 @@ package com.example.supplychainashu1;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,11 +15,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class SupplyChain extends Application {
 
     public  static  final  int width=700, height=600,headerBar=50;
 
     Pane bodyPane = new Pane();
+    Login login = new Login();
 
     private  GridPane headerBar(){
         TextField searchText = new TextField();
@@ -60,7 +60,13 @@ public class HelloApplication extends Application {
             public void handle(ActionEvent actionEvent) {
                 String email = emailTextField.getText();
                 String password = passwordField.getText();
-                messageLabel.setText(email +" @@ " + password);
+              //  messageLabel.setText(email +" @@ " + password);
+                if(login.customerLogin(email,password)){
+                    messageLabel.setText("Login Successful");
+                }
+                else{
+                    messageLabel.setText("Login Failed");
+                }
             }
         });
 
